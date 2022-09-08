@@ -138,5 +138,31 @@
 
   }
 
+  function cat_detail() {
+        include("inc/db.php");
+
+        if(isset($_GET['cat_id'])) {
+            $cat_id = $_GET['cat_id'];
+            $cat_pro = $con -> prepare("select * from product where cat_id='$cat_id'");
+            $cat_pro -> setFetchMode (PDO:: FETCH_ASSOC);
+            $cat_pro -> execute();
+
+
+            while ($row_cat = $cat_pro -> fetch()):
+            echo"<li>
+                    <a href='pro_detail.php?pro_id=".$row_cat['pro_id']."'
+                        <h4>".$row_cat['pro_name']."</h4>
+                        <img src='img/pro_imgs/".$row_cat['pro_img1']."'>
+                        <center>
+                                <button id='pro_btn'><a href='pro_detail.php?pro_id=".$row_cat['pro_id']."'>View</a></button>
+                                <button id='pro_btn'><a href='#'>Cart</a></button>
+                                <button id='pro_btn'><a href='#'>Wishlist</a></button>
+                        </center>
+                    </a>
+                </li>";
+            endwhile;  
+        }
+  }
+
                                                                  
 ?>
