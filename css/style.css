@@ -202,6 +202,51 @@ body {
     margin-top: 3%;
 }
 
+#body_left h3 {
+    color: #fff;
+    background: var(--secondary-color);
+    padding-left: 5%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #000;
+}
+
+#body_right h2 {
+    background: var(--secondary-color);
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+    text-transform: uppercase;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 3px 3px 3px #000;
+}
+
+#body_right ul {
+    list-style-type: none;
+}
+
+#body_right ul li {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 5%;
+}
+
+#body_right ul li a {
+    color: #2e2e2e;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#body_right ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
 #pro_btn {
     width: 30%;
     height: 40px;
@@ -352,16 +397,6 @@ body {
     border-radius: 5px;
 }
 
-#body_left h3 {
-    color: #fff;
-    background: var(--secondary-color);
-    padding-left: 5%;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 3px;
-    box-shadow: 3px 3px 3px #000;
-}
-
 #slider {
     width: 100%;
     height: 500px;
@@ -394,17 +429,6 @@ body {
     background: #fff;
     float: left;
     margin: 1% 1% 1% 0;
-}
-
-#body_right h2 {
-    background: var(--secondary-color);
-    height: 40px;
-    text-align: center;
-    color: #fff;
-    line-height: 40px;
-    text-transform: uppercase;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
 }
 
 #footer {
