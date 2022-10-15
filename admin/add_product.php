@@ -71,6 +71,17 @@
                 <td><input type="text" name="pro_warranty"></td>
             </tr>
             <tr>
+                <td>For Whome : </td>
+                <td>
+                    <select name="for_whome">
+                        <option></option>
+                        <option>Men</option>
+                        <option>Women</option>
+                        <option>Kids</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
                 <td>Enter Keyword : </td>
                 <td><input type="text" name="pro_keyword"></td>
             </tr>

@@ -10,10 +10,10 @@
     </ul>
 </div>
 <div id="search">
-    <form method="get" enctype="multipart/form-data">
-        <input type="text" placeholder="search from here...">
-        <button id="search_btn">search</button>
-        <button id="cart_btn">cart</button>
+    <form method="get" action="search.php" enctype="multipart/form-data">
+        <input type="text" name='user_query' placeholder="search from here...">
+        <button name='search' id="search_btn">search</button>
+        <button id="cart_btn"><a href='cart.php'>cart <?php echo cart_count(); ?></a></button>
     </form>
 </div>
 </div>

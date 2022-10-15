@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="css/main.css">
-
     <title>Online Store</title>
 </head>
 
@@ -16,10 +15,18 @@
     include("inc/function.php");
     include("inc/header.php");
     include("inc/navbar.php");
-    include("inc/bodyleft.php");
-    include("inc/bodyright.php");
+    ?>
+
+    <div class="cart" enctype="multipart/form-data">
+        <form method="POST">
+
+            <?php echo cart_display(); ?>
+            </table>
+        </form>
+    </div>
+
+    <?php
     include("inc/footer.php");
-    echo add_cart();
     ?>
 </body>
 

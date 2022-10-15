@@ -71,6 +71,8 @@
 
             $pro_warranty = $_POST['pro_warranty'];
 
+        $pro_for_whome = $_POST['for_whome'];
+
             $pro_keyword = $_POST['pro_keyword'];
 
             
@@ -80,14 +82,14 @@
                                             pro_name, cat_id, sub_cat_id, 
                                             pro_img1, pro_img2, pro_img3, pro_img4, 
                                             pro_feature1, pro_feature2, pro_feature3, pro_feature4, pro_feature5, 
-                                            pro_price, pro_model, pro_warranty, pro_keyword, pro_added_date
+                                            pro_price, pro_model, pro_warranty, pro_keyword, pro_added_date, for_whome
                                         ) 
                                         values
                                         (
                                             '$pro_name', '$cat_id', '$sub_cat_id', 
                                             '$pro_img1', '$pro_img2', '$pro_img3', '$pro_img4', 
                                             '$pro_feature1', '$pro_feature2', '$pro_feature3', '$pro_feature4', '$pro_feature5',
-                                            '$pro_price', '$pro_model', '$pro_warranty', '$pro_keyword', NOW()
+                                            '$pro_price', '$pro_model', '$pro_warranty', '$pro_keyword', NOW(), '$pro_for_whome'
                                         )");
             
             if ($add_cat -> execute()) {
@@ -146,7 +148,7 @@
 
     function view_product () {
         include("inc/db.php");
-        $fetch_pro = $con -> prepare ("select * from product");
+    $fetch_pro = $con->prepare("select * from product ORDER BY 1 DESC");
         $fetch_pro -> setFetchMode (PDO :: FETCH_ASSOC);
         $fetch_pro -> execute();
         $i = 1;
@@ -475,7 +477,5 @@
         }
 
     }
-
-
 
 ?>

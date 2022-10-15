@@ -16,10 +16,9 @@
     include("inc/function.php");
     include("inc/header.php");
     include("inc/navbar.php");
-    include("inc/bodyleft.php");
+    echo search();
     include("inc/bodyright.php");
     include("inc/footer.php");
-    echo add_cart();
     ?>
 </body>
 
